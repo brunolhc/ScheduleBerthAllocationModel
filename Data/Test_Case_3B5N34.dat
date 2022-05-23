@@ -1,0 +1,65 @@
+SheetConnection sheet("Test_Case_3B5N34.xlsb");
+
+ N from SheetRead(sheet,"'Data'!A2");
+ B from SheetRead(sheet,"'Data'!A5");
+ m_0 = 4;
+ M from SheetRead(sheet,"'Data'!A11");
+ TM from SheetRead(sheet,"'Data'!A14");
+
+ aux_input_1 from SheetRead(sheet,"'Data'!E1");
+ arrival_time from SheetRead(sheet,aux_input_1);
+
+ aux_input_2 from SheetRead(sheet,"'Data'!F1");
+ deadline_time from SheetRead(sheet,aux_input_2);
+
+ aux_input_3 from SheetRead(sheet,"'Data'!K1");
+ Avalible_machine from SheetRead(sheet,aux_input_3);
+
+ aux_input_4 from SheetRead(sheet,"'Data'!G1");
+ load_ship from SheetRead(sheet,aux_input_4);
+
+ aux_input_5 from SheetRead(sheet,"'Data'!L1");
+ tax_machine from SheetRead(sheet,aux_input_5);
+
+ aux_input_6 from SheetRead(sheet,"'Data'!M1");
+ min_machine from SheetRead(sheet,aux_input_6);
+
+ aux_input_7 from SheetRead(sheet,"'Data'!N1");
+ max_machine from SheetRead(sheet,aux_input_7);
+
+ aux_output_1 from SheetRead(sheet,"'Result Aux'!B1");
+ Result_sched to SheetWrite(sheet,aux_output_1);
+
+ aux_output_2 from SheetRead(sheet,"'Result Aux'!J1");
+ T to SheetWrite(sheet,aux_output_2);
+
+ aux_output_3 from SheetRead(sheet,"'Result Aux'!K1");
+ t to SheetWrite(sheet,aux_output_3);
+
+ aux_output_4 from SheetRead(sheet,"'Result Aux'!L1");
+ Result_sim to SheetWrite(sheet,aux_output_4);
+
+ aux_output_5 from SheetRead(sheet,"'Result Aux'!M1");
+ qtm to SheetWrite(sheet,aux_output_5);
+
+ opt_time to SheetWrite(sheet,"'Result'!E1");
+
+ z to SheetWrite(sheet,"'Result'!H1");
+ d to SheetWrite(sheet,"'Result'!J1");
+
+time_per_machine = [ 
+ //Ships 1 
+[[ 3.11 4.06 ] [ -1.56 -2.03 ] [ -0.52 -0.68 ] [ -0.26 -0.34 ] ] 
+
+ //Ships 2 
+[[ 1.49 1.94 ] [ -0.74 -0.97 ] [ -0.25 -0.32 ] [ -0.12 -0.16 ] ] 
+
+ //Ships 3 
+[[ 1.15 1.49 ] [ -0.57 -0.75 ] [ -0.19 -0.25 ] [ -0.10 -0.12 ] ] 
+
+ //Ships 4 
+[[ 10.66 13.89 ] [ -5.33 -6.95 ] [ -1.78 -2.32 ] [ -0.89 -1.16 ] ] 
+
+ //Ships 5 
+[[ 7.01 9.14 ] [ -3.51 -4.57 ] [ -1.17 -1.52 ] [ -0.58 -0.76 ] ] 
+];

@@ -1,0 +1,65 @@
+SheetConnection sheet("Test_Case_3B5N533.xlsb");
+
+ N from SheetRead(sheet,"'Data'!A2");
+ B from SheetRead(sheet,"'Data'!A5");
+ m_0 = 5;
+ M from SheetRead(sheet,"'Data'!A11");
+ TM from SheetRead(sheet,"'Data'!A14");
+
+ aux_input_1 from SheetRead(sheet,"'Data'!E1");
+ arrival_time from SheetRead(sheet,aux_input_1);
+
+ aux_input_2 from SheetRead(sheet,"'Data'!F1");
+ deadline_time from SheetRead(sheet,aux_input_2);
+
+ aux_input_3 from SheetRead(sheet,"'Data'!K1");
+ Avalible_machine from SheetRead(sheet,aux_input_3);
+
+ aux_input_4 from SheetRead(sheet,"'Data'!G1");
+ load_ship from SheetRead(sheet,aux_input_4);
+
+ aux_input_5 from SheetRead(sheet,"'Data'!L1");
+ tax_machine from SheetRead(sheet,aux_input_5);
+
+ aux_input_6 from SheetRead(sheet,"'Data'!M1");
+ min_machine from SheetRead(sheet,aux_input_6);
+
+ aux_input_7 from SheetRead(sheet,"'Data'!N1");
+ max_machine from SheetRead(sheet,aux_input_7);
+
+ aux_output_1 from SheetRead(sheet,"'Result Aux'!B1");
+ Result_sched to SheetWrite(sheet,aux_output_1);
+
+ aux_output_2 from SheetRead(sheet,"'Result Aux'!J1");
+ T to SheetWrite(sheet,aux_output_2);
+
+ aux_output_3 from SheetRead(sheet,"'Result Aux'!K1");
+ t to SheetWrite(sheet,aux_output_3);
+
+ aux_output_4 from SheetRead(sheet,"'Result Aux'!L1");
+ Result_sim to SheetWrite(sheet,aux_output_4);
+
+ aux_output_5 from SheetRead(sheet,"'Result Aux'!M1");
+ qtm to SheetWrite(sheet,aux_output_5);
+
+ opt_time to SheetWrite(sheet,"'Result'!E1");
+
+ z to SheetWrite(sheet,"'Result'!H1");
+ d to SheetWrite(sheet,"'Result'!J1");
+
+time_per_machine = [ 
+ //Ships 1 
+[[ 13.29 13.53 10.09 ] [ -6.64 -6.77 -5.05 ] [ -2.21 -2.26 -1.68 ] [ -1.11 -1.13 -0.84 ] [ -0.66 -0.68 -0.50 ] ] 
+
+ //Ships 2 
+[[ 6.28 6.39 4.77 ] [ -3.14 -3.20 -2.38 ] [ -1.05 -1.07 -0.79 ] [ -0.52 -0.53 -0.40 ] [ -0.31 -0.32 -0.24 ] ] 
+
+ //Ships 3 
+[[ 3.15 3.21 2.39 ] [ -1.57 -1.60 -1.20 ] [ -0.52 -0.53 -0.40 ] [ -0.26 -0.27 -0.20 ] [ -0.16 -0.16 -0.12 ] ] 
+
+ //Ships 4 
+[[ 9.58 9.76 7.28 ] [ -4.79 -4.88 -3.64 ] [ -1.60 -1.63 -1.21 ] [ -0.80 -0.81 -0.61 ] [ -0.48 -0.49 -0.36 ] ] 
+
+ //Ships 5 
+[[ 1.01 1.03 0.77 ] [ -0.50 -0.51 -0.38 ] [ -0.17 -0.17 -0.13 ] [ -0.08 -0.09 -0.06 ] [ -0.05 -0.05 -0.04 ] ] 
+];

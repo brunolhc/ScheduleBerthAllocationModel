@@ -1,0 +1,62 @@
+SheetConnection sheet("Test_Case_2B4N63.xlsb");
+
+ N from SheetRead(sheet,"'Data'!A2");
+ B from SheetRead(sheet,"'Data'!A5");
+ m_0 = 6;
+ M from SheetRead(sheet,"'Data'!A11");
+ TM from SheetRead(sheet,"'Data'!A14");
+
+ aux_input_1 from SheetRead(sheet,"'Data'!E1");
+ arrival_time from SheetRead(sheet,aux_input_1);
+
+ aux_input_2 from SheetRead(sheet,"'Data'!F1");
+ deadline_time from SheetRead(sheet,aux_input_2);
+
+ aux_input_3 from SheetRead(sheet,"'Data'!K1");
+ Avalible_machine from SheetRead(sheet,aux_input_3);
+
+ aux_input_4 from SheetRead(sheet,"'Data'!G1");
+ load_ship from SheetRead(sheet,aux_input_4);
+
+ aux_input_5 from SheetRead(sheet,"'Data'!L1");
+ tax_machine from SheetRead(sheet,aux_input_5);
+
+ aux_input_6 from SheetRead(sheet,"'Data'!M1");
+ min_machine from SheetRead(sheet,aux_input_6);
+
+ aux_input_7 from SheetRead(sheet,"'Data'!N1");
+ max_machine from SheetRead(sheet,aux_input_7);
+
+ aux_output_1 from SheetRead(sheet,"'Result Aux'!B1");
+ Result_sched to SheetWrite(sheet,aux_output_1);
+
+ aux_output_2 from SheetRead(sheet,"'Result Aux'!J1");
+ T to SheetWrite(sheet,aux_output_2);
+
+ aux_output_3 from SheetRead(sheet,"'Result Aux'!K1");
+ t to SheetWrite(sheet,aux_output_3);
+
+ aux_output_4 from SheetRead(sheet,"'Result Aux'!L1");
+ Result_sim to SheetWrite(sheet,aux_output_4);
+
+ aux_output_5 from SheetRead(sheet,"'Result Aux'!M1");
+ qtm to SheetWrite(sheet,aux_output_5);
+
+ opt_time to SheetWrite(sheet,"'Result'!E1");
+
+ z to SheetWrite(sheet,"'Result'!H1");
+ d to SheetWrite(sheet,"'Result'!J1");
+
+time_per_machine = [ 
+ //Ships 1 
+[[ 7.10 6.46 ] [ -3.55 -3.23 ] [ -1.18 -1.08 ] [ -0.59 -0.54 ] [ -0.35 -0.32 ] [ -0.24 -0.22 ] ] 
+
+ //Ships 2 
+[[ 17.02 15.48 ] [ -8.51 -7.74 ] [ -2.84 -2.58 ] [ -1.42 -1.29 ] [ -0.85 -0.77 ] [ -0.57 -0.52 ] ] 
+
+ //Ships 3 
+[[ 13.97 12.72 ] [ -6.99 -6.36 ] [ -2.33 -2.12 ] [ -1.16 -1.06 ] [ -0.70 -0.64 ] [ -0.47 -0.42 ] ] 
+
+ //Ships 4 
+[[ 5.29 4.81 ] [ -2.64 -2.41 ] [ -0.88 -0.80 ] [ -0.44 -0.40 ] [ -0.26 -0.24 ] [ -0.18 -0.16 ] ] 
+];
