@@ -1,0 +1,70 @@
+/*********************************************
+ * OPL 12.6.0.0 Machine and Berth Alocation Problem
+ Model and Algorithm created by Bruno Luís Hönigmann Cereser
+ * Creation Date: 24/09/2015 at 15:58:09
+ *********************************************/
+
+SheetConnection sheet("Test_Case_7.xlsx");
+
+N from SheetRead(sheet,"'Data'!A2");
+B from SheetRead(sheet,"'Data'!A5");
+TM from SheetRead(sheet,"'Data'!A8");
+M from SheetRead(sheet,"'Data'!A11");
+m_0 = 7;
+
+
+aux_input_1 from SheetRead(sheet,"'Data'!E1");
+arrival_time from SheetRead(sheet,aux_input_1);
+
+aux_input_2 from SheetRead(sheet,"'Data'!F1");
+deadline_time from SheetRead(sheet,aux_input_2);
+
+aux_input_3 from SheetRead(sheet,"'Data'!G1");
+load_ship from SheetRead(sheet,aux_input_3);
+
+aux_input_4 from SheetRead(sheet,"'Data'!P1");
+Avalible_machine from SheetRead(sheet,aux_input_4);
+
+aux_input_5 from SheetRead(sheet,"'Data'!Q1");
+tax_machine from SheetRead(sheet,aux_input_5);
+
+aux_input_6 from SheetRead(sheet,"'Data'!R1");
+min_machine from SheetRead(sheet,aux_input_6);
+
+aux_input_7 from SheetRead(sheet,"'Data'!S1");
+max_machine from SheetRead(sheet,aux_input_7);
+
+
+aux_output_1 from SheetRead(sheet,"'Result Aux'!B1");
+Result_sched to SheetWrite(sheet,aux_output_1);
+
+aux_output_2 from SheetRead(sheet,"'Result Aux'!F1");
+T to SheetWrite(sheet,aux_output_2);
+
+aux_output_3 from SheetRead(sheet,"'Result Aux'!G1");
+t to SheetWrite(sheet,aux_output_3);
+
+aux_output_4 from SheetRead(sheet,"'Result Aux'!H1");
+Result_sim to SheetWrite(sheet,aux_output_4);
+
+aux_output_5 from SheetRead(sheet,"'Result Aux'!I1");
+qtm to SheetWrite(sheet,aux_output_5);
+
+opt_time to SheetWrite(sheet,"'Result'!E1");
+
+//aux5 from SheetRead(sheet,"'Result Aux'!M1");
+//Result_time to SheetWrite(sheet,aux5);
+
+
+
+/*
+N = 2;
+B = 2;
+M = 1000;
+
+arrival_time = [1.0, 2.0];
+
+deadline_time = [5, 5];
+
+service_time = [[2, 3],
+				[2, 3]];*/
